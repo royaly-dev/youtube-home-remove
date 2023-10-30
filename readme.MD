@@ -4,9 +4,9 @@
     A simple chrome extention to remove youtube home page and youtube short
     <br />
     <br />
-    <a href="https://github.com/royalygames/todolist#-changelog">📜 ChangeLog</a>
+    <a href="https://github.com/royalygames/youtube-home-remove#-changelog">📜 ChangeLog</a>
     ·
-    <a href="https://github.com/royalygames/todolist/issues">⚠️ Report Bug</a>
+    <a href="https://github.com/royalygames/youtube-home-remove/issues">⚠️ Report Bug</a>
   </p>
 </div>
 
