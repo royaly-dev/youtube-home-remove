@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "disable youtube",
   "version": "0.0.2",
-  "description": "Une extension pour supprimer les short et la home page de youtube",
+  "description": "an extention to delete youtube home page and youtube short",
   "permissions": [
     "activeTab",
     "storage"
