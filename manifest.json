@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "disable youtube",
-  "version": "1.0",
+  "version": "0.0.2",
   "description": "Une extension pour supprimer les short et la home page de youtube",
   "permissions": [
     "activeTab",
