@@ -23,6 +23,8 @@
 
 - block youtube short
 - block youtube home page
+- enable / disable the extention whith the popup
+- personalize a custom message who will replace the home page
 
 ---
 
@@ -33,6 +35,13 @@
 ---
 
 ### 📜 ChangeLog
+
+```diff
+v0.0.2 ⋮ 08/11/2023
+! add a checkbox to enable and disable the extention whith the extention popup
+! rename the extention to : disable youtube
+! add personalized message on the youtube home page
+```
 
 ```diff
 v0.0.1 ⋮ 30/10/2023
