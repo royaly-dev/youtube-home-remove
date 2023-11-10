@@ -16,10 +16,10 @@
 ### ⚙️ Installation
 
 - step 1 : `Go to https://github.com/royalygames/youtube-home-remove/releases and download the last version of the extention`
-- step 2 : `Go to extention in your chrome browser
+- step 2 : `Go to extention in your chrome browser`
 - step 3 : `Active developer mode`
 - step 4 : `Now click on Load unpacked`
-- step 5 : `Selcte the folder of the extentionand
+- step 5 : `Selcte the folder of the extentionand`
 - step 6 : `now on youtube you don't see any more home and short !`
 
 ---
