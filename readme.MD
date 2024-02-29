@@ -37,11 +37,6 @@
 ### 📜 ChangeLog
 
 ```diff
-v0.0.3 ⋮ 08/11/2023
-! remove the recommendation bar in the video page
-```
-
-```diff
 v0.0.2 ⋮ 08/11/2023
 ! add a checkbox to enable and disable the extention whith the extention popup
 ! rename the extention to : disable youtube
