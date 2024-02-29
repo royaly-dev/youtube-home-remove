@@ -43,6 +43,12 @@
 ### 📜 ChangeLog
 
 ```diff
+v0.0.3 ⋮ 29/02/2024
+! change the popup page style
+! add indictor that say "saved !" if the custom message have been succesfuly saved
+```
+
+```diff
 v0.0.2 ⋮ 08/11/2023
 ! add a checkbox to enable and disable the extention whith the extention popup
 ! rename the extention to : disable youtube
