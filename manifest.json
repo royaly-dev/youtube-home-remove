@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "disable youtube",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "an extention to delete youtube home page and youtube short",
   "permissions": [
     "activeTab",
@@ -10,7 +10,13 @@
   "content_scripts": [
     {
       "matches": ["*://www.youtube.com/*"],
-      "js": ["content.js"]
+      "js": ["content.js", "external-script.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["external-script.js"],
+      "matches": ["<all_urls>"]
     }
   ],
   "action": {
