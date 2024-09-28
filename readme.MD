@@ -43,6 +43,11 @@
 ### 📜 ChangeLog
 
 ```diff
+v0.0.5 ⋮ 29/02/2024
+! added search bar in the "acces youtube" menu
+```
+
+```diff
 v0.0.3 ⋮ 29/02/2024
 ! change the popup page style
 ! add indictor that say "saved !" if the custom message have been succesfuly saved
