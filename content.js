@@ -11,12 +11,11 @@ const observeAndRemoveElements = () => {
       for (let node of mutation.addedNodes) {
         if (node instanceof HTMLElement) {
           if (node.id == "columns") {
-            console.log("trouvé !")
             removeElement("#columns #secondary")
           }
+
           if (node.matches('ytd-rich-grid-renderer')) {
             removeElement('ytd-rich-grid-renderer')
-            console.log("start custom texte")
             const y = document.querySelector('ytd-two-column-browse-results-renderer')
             const t = document.createElement('h1')
             t.style.textAlign = "center";

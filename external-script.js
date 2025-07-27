@@ -1,4 +1,9 @@
 window.yes = async function() {
+  document.querySelectorAll("#dismissible").forEach((maped) => {
+   if (maped?.querySelector("#rich-shelf-header-container")) {
+       maped.remove()
+   }
+})
     document.querySelector("#alerteboxforyoutubedisabled").remove();
   };
   
