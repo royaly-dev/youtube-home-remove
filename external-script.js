@@ -1,4 +1,5 @@
 window.yes = async function() {
+  chrome.storage.sync.set({ 'removetime': Date.now() });
   document.querySelectorAll("#dismissible").forEach((maped) => {
    if (maped?.querySelector("#rich-shelf-header-container")) {
        maped.remove()
@@ -8,8 +9,6 @@ window.yes = async function() {
   };
   
   window.no = async function() {
-    console.log("remove")
-    chrome.storage.sync.set({ 'removeYtdBrowse': true });
-    console.log("restart")
+    chrome.storage.sync.set({ 'removeYtdBrowse': true, 'removetime': Date.now() });
     location.href = location.href
   };

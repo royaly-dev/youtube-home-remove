@@ -20,6 +20,6 @@ removeYtdBrowseCheckbox.addEventListener("change", () => {
     if (removeYtdBrowseCheckbox.checked === true) {
         chrome.storage.sync.set({ 'removeYtdBrowse': true });
     } else if (removeYtdBrowseCheckbox.checked === false) {
-        chrome.storage.sync.set({ 'removeYtdBrowse': false})
+        chrome.storage.sync.set({ 'removeYtdBrowse': false, 'removetime': Date.now() });
     }
 });

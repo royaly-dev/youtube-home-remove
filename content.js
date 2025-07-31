@@ -14,7 +14,7 @@ const observeAndRemoveElements = () => {
             removeElement("#columns #secondary")
           }
 
-          if (node.matches('ytd-rich-grid-renderer')) {
+          if (node.matches('ytd-rich-grid-renderer') && location.href === "https://www.youtube.com/") {
             removeElement('ytd-rich-grid-renderer')
             const y = document.querySelector('ytd-two-column-browse-results-renderer')
             const t = document.createElement('h1')
@@ -27,7 +27,7 @@ const observeAndRemoveElements = () => {
             })
             y.append(t)
           }
-          if (node.matches("#shorts-container, ytd-rich-grid-renderer, ytd-watch-next-secondary-results-renderer #items,#columns #secondary")) {
+          if (node.matches("#shorts-container, ytd-rich-grid-renderer, ytd-watch-next-secondary-results-renderer #items,#columns #secondary") && location.href === "https://www.youtube.com/") {
             node.remove()
           }
         }
@@ -39,11 +39,9 @@ const observeAndRemoveElements = () => {
 };
 
 window.addEventListener("load", async () => {
-  console.log("loaded !")
   const script = document.createElement("script")
   const src = await chrome.runtime.getURL("external-script.js")
   script.src = src
-  console.log(script)
   document.querySelector("body").append(script);
 
   async function yes() {
@@ -53,24 +51,21 @@ window.addEventListener("load", async () => {
     
   }
 
-  chrome.storage.sync.get(['removeYtdBrowse', 'msg'], (result) => {
+  chrome.storage.sync.get(['removeYtdBrowse', 'msg', 'removetime'], (result) => {
     if (result.removeYtdBrowse === true) {
-      console.log("start observeur")
       observeAndRemoveElements();
-      console.log("start selctor")
       if (document.querySelector("#shorts-container")) {
         removeElement("#shorts-container");
       }
       if (document.querySelector("ytd-watch-next-secondary-results-renderer #items")) {
         removeElement("ytd-watch-next-secondary-results-renderer #items");
       }
-      if (document.querySelector("ytd-rich-grid-renderer")) {
+      if (document.querySelector("ytd-rich-grid-renderer") && location.href === "https://www.youtube.com/") {
         removeElement("ytd-rich-grid-renderer");
       }
       if (document.querySelector("#columns #secondary")) {
         removeElement("#columns #secondary")
       }
-      console.log("start custom texte")
       const y = document.querySelector('ytd-two-column-browse-results-renderer')
       const t = document.createElement('h1')
       t.style.textAlign = "center";
@@ -80,7 +75,10 @@ window.addEventListener("load", async () => {
       t.innerHTML = `${result.msg}`
       y.append(t)
     } else if (result.removeYtdBrowse === false) {
-      console.log("create alerte box")
+      if (result?.removetime && (Date.now() - result.removetime) > 1000 * 60 * 10) {
+        chrome.storage.sync.set({ 'removeYtdBrowse': true });
+        location.href = location.href;
+      }
       const styled = document.createElement("style")
       styled.innerHTML = `
         /* CSS */

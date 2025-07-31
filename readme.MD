@@ -43,6 +43,12 @@
 ### 📜 ChangeLog
 
 ```diff
+v0.0.6 ⋮ 
+! auto remove short suggestion
+! fixed the "video" tab in the channel page which is not displayed if the extension is activated
+```
+
+```diff
 v0.0.5 ⋮ 29/02/2024
 ! added search bar in the "acces youtube" menu
 ```
